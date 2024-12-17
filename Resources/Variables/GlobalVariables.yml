@@ -1,0 +1,11 @@
+browser: "chrome"
+
+#Metadata content can be mentioned below with the syntax of Key and Value in the following format
+metadata:
+  - Release    1.0
+  - Build    0.314
+
+#Salesforce demo URL
+#sf_url: "https://fastly--staging.sandbox.my.salesforce.com/"
+sf_url: "https://fastly--staging.sandbox.lightning.force.com/lightning/r/Opportunity/006Nq00000AYwIMIA1/view"
+url:  "https://fastly--staging.sandbox.lightning.force.com/one/one.app#eyJjb21wb25lbnREZWYiOiJvbmU6YWxvaGFQYWdlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzIjoiaHR0cHM6Ly9mYXN0bHktLXN0YWdpbmcuc2FuZGJveC5teS5zYWxlc2ZvcmNlLmNvbS9hcGV4L3NicXFfX3NiP3Njb250cm9sQ2FjaGluZz0xJmlkPWEzT05xMDAwMDAwVVhFZk1BTyJ9LCJzdGF0ZSI6e319"

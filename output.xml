@@ -1,0 +1,1621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-12-09T18:45:08.038733" rpa="false" schemaversion="5">
+<suite id="s1" name="CreateLeadTests copy" source="c:\Users\Relanto\Desktop\Salesforce_Sample_Demo\Tests\CreateLeadTests copy.robot">
+<kw name="Initial Setup" type="SETUP">
+<kw name="Open browser and navigate to url" owner="CommonPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:08.474893" level="INFO">Opening browser 'chrome' to base url 'https://fastly--staging.sandbox.lightning.force.com/lightning/r/Opportunity/006Nq00000AYwIMIA1/view'.</msg>
+<arg>${sf_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-09T18:45:08.473888" elapsed="5.634184"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.109070" elapsed="0.082046"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.192110" elapsed="0.003001"/>
+</kw>
+<arg>${sf_url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-12-09T18:45:08.471888" elapsed="5.723223"/>
+</kw>
+<kw name="Login as a System Administrator" owner="LeadsKeywords">
+<kw name="Enter credentials" owner="LoginPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Username</arg>
+<arg>60 seconds</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.199109" elapsed="0.034746"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.234853" elapsed="0.051953"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:14.288807" level="INFO">Typing text 'dbell@fastly.com.staging ' into text field 'xpath=//input[@id=//label[text()='Username']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.287817" elapsed="0.308105"/>
+</kw>
+<arg>Username</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2024-12-09T18:45:14.234853" elapsed="0.362074"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.597930" elapsed="0.145869"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:14.745852" level="INFO">Typing text 'Testing2!!' into text field 'xpath=//input[@id=//label[text()='Password']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:14.744794" elapsed="0.319023"/>
+</kw>
+<arg>Password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-12-09T18:45:14.596927" elapsed="0.467890"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:15.064817" level="INFO">Clicking button 'Log In to Sandbox'.</msg>
+<arg>Log In to Sandbox</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:15.064817" elapsed="11.196083"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:45:29.262222" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:45:26.261926" elapsed="3.000296"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:39.513306" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-807.png"&gt;&lt;img src="selenium-screenshot-807.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-09T18:45:39.514288" level="FAIL">Element with locator '//div[@id='header']//span[text()='Scheduled Maintenance']' not found.</msg>
+<arg>//div[@id='header']//span[text()='Scheduled Maintenance']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-12-09T18:45:29.262222" elapsed="10.265076">Element with locator '//div[@id='header']//span[text()='Scheduled Maintenance']' not found.</status>
+</kw>
+<msg time="2024-12-09T18:45:39.527298" level="INFO">${elem_size} = False</msg>
+<var>${elem_size}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//div[@id='header']//span[text()='Scheduled Maintenance']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-09T18:45:29.262222" elapsed="10.266113"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${elem_size}</arg>
+<arg>Click Element</arg>
+<arg>//div[@id='message']//a[text()='Got it']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:45:39.528335" elapsed="0.001033"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Home</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:45:39.529368" elapsed="0.050290"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:39.629676" level="INFO">Current page contains text 'Home'.</msg>
+<arg>Home</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-09T18:45:39.580663" elapsed="0.050524"/>
+</kw>
+<arg>${login_sys_admin.username}</arg>
+<arg>${login_sys_admin.password}</arg>
+<status status="PASS" start="2024-12-09T18:45:14.196113" elapsed="25.435074"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:14.196113" elapsed="25.435074"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:08.471888" elapsed="31.159299"/>
+</kw>
+<test id="s1-t1" name="Convert Lead" line="20">
+<kw name="Select Sales" owner="LeadsKeywords">
+<kw name="Select &quot;Sales&quot; from the menu grid" owner="DashboardPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${menu_dots_button}</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:39.634203" elapsed="0.042697"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:39.677877" level="INFO">Clicking element '//div[@role='navigation'][@aria-label='App']/descendant::button'.</msg>
+<arg>${menu_dots_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:39.677877" elapsed="0.095281"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_search_text_box}</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:39.774158" elapsed="1.582134"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:41.357669" level="INFO">Typing text 'Fastly Sales' into text field '//input[@placeholder='Search apps and items...']'.</msg>
+<arg>${app_search_text_box}</arg>
+<arg>Fastly Sales</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:41.357669" elapsed="0.149176"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${app_search_result_link}</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:41.506845" elapsed="0.157065"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:41.666017" level="INFO">Double clicking element '//a[@data-label='Fastly Sales']/descendant::b[text()='Fastly Sales']'.</msg>
+<arg>${app_search_result_link}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:41.665020" elapsed="0.355618"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${app_launcher_menu}</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:42.020638" elapsed="10.032197"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:39.634203" elapsed="12.419140"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:39.633199" elapsed="12.420144"/>
+</kw>
+<kw name="Create a Lead" owner="LeadsKeywords">
+<kw name="Select &quot;Leads&quot; tab" owner="DashboardPage">
+<kw name="ClickTopNavigationTab" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@title='${tab_name}']</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:52.055850" elapsed="0.074676"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:52.131536" level="INFO">Double clicking element 'xpath=//a[@title='Leads']'.</msg>
+<arg>xpath=//a[@title='${tab_name}']</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:45:52.130526" elapsed="0.355024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//lst-breadcrumbs//span[text()='${tab_name}']</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:52.485550" elapsed="1.307454"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:45:54.794321" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:45:53.794001" elapsed="1.000841"/>
+</kw>
+<arg>Leads</arg>
+<status status="PASS" start="2024-12-09T18:45:52.055850" elapsed="2.738992"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:52.054680" elapsed="2.741193"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:45:57.797378" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:45:54.795873" elapsed="3.002527"/>
+</kw>
+<kw name="Verify the New button is displayed" owner="LeadsPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dashboard_new_button}</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:45:57.801405" elapsed="0.040283"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:45:57.860719" level="INFO">Current page contains element '//a[@title='New']'.</msg>
+<arg>${dashboard_new_button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:45:57.842781" elapsed="0.019936"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:57.799403" elapsed="0.063314"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:00.865079" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:45:57.863725" elapsed="3.001354"/>
+</kw>
+<kw name="Click on the New button" owner="LeadsPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:00.868103" level="INFO">Clicking link 'New'.</msg>
+<arg>New</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:00.867102" elapsed="0.272471"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:46:00.866101" elapsed="0.274468"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:04.140769" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:01.140569" elapsed="3.000200"/>
+</kw>
+<kw name="Verify the New Lead dialog screen is displayed" owner="LeadsPage">
+<kw name="Verify ModalisDisplayed" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@role='dialog'][@aria-modal='true']//h2[text()='${dialog_title}']</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:04.142832" elapsed="0.044813"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:04.216037" level="INFO">Element 'xpath=//div[@role='dialog'][@aria-modal='true']//h2[text()='New Lead']' is displayed.</msg>
+<arg>xpath=//div[@role='dialog'][@aria-modal='true']//h2[text()='${dialog_title}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:04.187645" elapsed="0.029737"/>
+</kw>
+<arg>New Lead</arg>
+<status status="PASS" start="2024-12-09T18:46:04.141833" elapsed="0.075549"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:46:04.141833" elapsed="0.075549"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:07.218550" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:04.217382" elapsed="3.001686"/>
+</kw>
+<kw name="Enter the mandatory fields and create a Lead" owner="LeadsPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>New Lead</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:46:07.221086" elapsed="0.028475"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:07.279097" level="INFO">Current page contains text 'New Lead'.</msg>
+<arg>New Lead</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-09T18:46:07.250630" elapsed="0.029567"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Next</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:46:07.281067" elapsed="0.026790"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:07.343806" level="INFO">Current page contains text 'Next'.</msg>
+<arg>Next</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-09T18:46:07.307857" elapsed="0.036951"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:10.346170" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:07.344808" elapsed="3.001362"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:10.347189" level="INFO">Clicking element '//span[contains(text(),'Next')]/..'.</msg>
+<arg>${next_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:10.346170" elapsed="0.139717"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-12-09T18:46:10.486887" level="INFO">${current_time} = 20241209184610</msg>
+<var>${current_time}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-12-09T18:46:10.486887" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-09T18:46:10.487886" level="INFO">${last_name} = User20241209184610</msg>
+<var>${last_name}</var>
+<arg>User${current_time}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-09T18:46:10.487886" elapsed="0.000000"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:10.489138" elapsed="3.125936"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:13.617071" level="INFO">Typing text 'User20241209184610' into text field 'xpath=//input[@id=//label[text()='Last Name']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:13.616076" elapsed="0.495064"/>
+</kw>
+<arg>Last Name</arg>
+<arg>${last_name}</arg>
+<status status="PASS" start="2024-12-09T18:46:10.487886" elapsed="3.624466"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.115168" elapsed="0.053828"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:14.170909" level="INFO">Typing text 'Automation' into text field 'xpath=//input[@id=//label[text()='First Name']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.169933" elapsed="0.319234"/>
+</kw>
+<arg>First Name</arg>
+<arg>${lead.firstname}</arg>
+<status status="PASS" start="2024-12-09T18:46:14.113225" elapsed="0.375942"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.492216" elapsed="0.050234"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:14.543462" level="INFO">Typing text 'Fastly123' into text field 'xpath=//input[@id=//label[text()='Company']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.542450" elapsed="0.318397"/>
+</kw>
+<arg>Company</arg>
+<arg>${lead.company}</arg>
+<status status="PASS" start="2024-12-09T18:46:14.490160" elapsed="0.371704"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-12-09T18:46:14.862848" level="INFO">${lead.Email} = 20241209184610@example.com</msg>
+<var>${lead.Email}</var>
+<arg>SEPARATOR=</arg>
+<arg>${current_time}</arg>
+<arg>@example.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.861864" elapsed="0.001875"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.865831" elapsed="0.051647"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:14.919111" level="INFO">Typing text '20241209184610@example.com' into text field 'xpath=//input[@id=//label[text()='Email']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:14.918537" elapsed="0.589412"/>
+</kw>
+<arg>Email</arg>
+<arg>${lead.Email}</arg>
+<status status="PASS" start="2024-12-09T18:46:14.863739" elapsed="0.645167"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:18.509479" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:15.508906" elapsed="3.000573"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:18.510499" level="INFO">Double clicking element '//button[text()='Save']'.</msg>
+<arg>${save_button_locator}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:18.510499" elapsed="0.444764"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${save_button_locator}</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:18.955263" elapsed="18.863429"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:46:07.220086" elapsed="30.598606"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:52.054680" elapsed="45.764012"/>
+</kw>
+<kw name="Convert Lead" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:40.821953" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:37.820706" elapsed="3.001247"/>
+</kw>
+<kw name="Convert Lead" owner="LeadsPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Convert</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:46:40.822963" elapsed="0.043980"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:40.915075" level="INFO">Current page contains text 'Convert'.</msg>
+<arg>Convert</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-09T18:46:40.867951" elapsed="0.047124"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:40.916292" level="INFO">Clicking element '//button[contains(text(),'Convert')]'.</msg>
+<arg>${btnConvertLead}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:40.916292" elapsed="0.116875"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:51.034803" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:41.033167" elapsed="10.001636"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:51.049007" level="INFO">@{window_handles} = [ F2E1C49D276FA6D403B90EF9BE5506CD | 6FE67AED96504BCA12F080C839DA6F1A ]</msg>
+<var>@{window_handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.034803" elapsed="0.014204"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:46:51.051265" level="INFO">['F2E1C49D276FA6D403B90EF9BE5506CD', '6FE67AED96504BCA12F080C839DA6F1A']</msg>
+<arg>${window_handles}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.050201" elapsed="0.001064"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-09T18:46:51.054221" level="INFO">${parent_window} = F2E1C49D276FA6D403B90EF9BE5506CD</msg>
+<var>${parent_window}</var>
+<arg>${window_handles}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.052269" elapsed="0.001952"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-09T18:46:51.056266" level="INFO">${child_window} = 6FE67AED96504BCA12F080C839DA6F1A</msg>
+<var>${child_window}</var>
+<arg>${window_handles}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.055225" elapsed="0.001997"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${child_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.058233" elapsed="0.112101"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:51.199242" level="INFO">${title} = Convert Lead: Automation User20241209184610 ~ Salesforce - Performance Edition</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.171331" elapsed="0.028914"/>
+</kw>
+<kw name="Log Title" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:51.223422" level="INFO">Convert Lead: Automation User20241209184610 ~ Salesforce - Performance Edition</msg>
+<doc>Logs and returns the title of the current page.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.200245" elapsed="0.024174"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${txtConvertLeadMessage}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.225421" elapsed="0.054572"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${txtConvertLeadMessage}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.281240" elapsed="0.287250"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:51.621894" level="INFO">${message} = Convert Lead</msg>
+<var>${message}</var>
+<arg>${txtConvertLeadMessage}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.569523" elapsed="0.052371"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="actions" owner="LeadsPage">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:46:57.626561" level="INFO">Slept 6 seconds.</msg>
+<arg>6 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.624930" elapsed="6.001631"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:57.636574" level="INFO">${created_record_url} = https://fastly--staging.sandbox.my.salesforce.com/lead/leadconvert.jsp?retURL=%2F00QO500000Hyyqj&amp;id=00QO500000Hyyqj&amp;nooppti=1&amp;cstatus=32</msg>
+<var>${created_record_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-09T18:46:57.626561" elapsed="0.010013"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:46:57.637572" level="INFO">Convert Lead successfully: https://fastly--staging.sandbox.my.salesforce.com/lead/leadconvert.jsp?retURL=%2F00QO500000Hyyqj&amp;id=00QO500000Hyyqj&amp;nooppti=1&amp;cstatus=32</msg>
+<arg>Convert Lead successfully: ${created_record_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:46:57.636574" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btnDetailConvert}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:46:57.637572" elapsed="0.035628"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:57.674156" level="INFO">Selecting options from selection list 'name=accid' by index 1.</msg>
+<arg>name=accid</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-12-09T18:46:57.673200" elapsed="0.173882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:46:57.848092" level="INFO">Clicking element '(//input[@title='Convert'])[1]'.</msg>
+<arg>${btnDetailConvert}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:46:57.847082" elapsed="2.341060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:05.189749" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:00.189144" elapsed="5.000605"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${inputConvertNewLead}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:05.190766" elapsed="0.036057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:05.227822" level="INFO">Clicking element '(//input[@title='Convert to New'])[1]'.</msg>
+<arg>${inputConvertNewLead}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:05.226823" elapsed="10.872331"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:16.337152" level="INFO">${createdRecordUrl} = https://fastly--staging.sandbox.lightning.force.com/lightning/_classic/%2F001O500000XRYVA</msg>
+<var>${createdRecordUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-09T18:47:16.099154" elapsed="0.238436"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:16.338623" level="INFO">Convert Lead successfully https://fastly--staging.sandbox.lightning.force.com/lightning/_classic/%2F001O500000XRYVA</msg>
+<arg>Convert Lead successfully ${createdRecordUrl}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:16.337590" elapsed="0.001033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:26.340923" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:16.339622" elapsed="10.001301"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:46:51.623938" elapsed="34.716985"/>
+</kw>
+<arg>'${message}' == 'Convert Lead'</arg>
+<arg>actions</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:46:51.622879" elapsed="34.718044"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:46:40.822963" elapsed="45.518971"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:46:37.819708" elapsed="48.522226"/>
+</kw>
+<kw name="afterLeadConversionVerifyAccount" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:29.344480" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:26.342934" elapsed="3.002055"/>
+</kw>
+<kw name="afterLeadConversionVerifyAccount" owner="LeadsPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${accountTab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.346004" elapsed="0.041769"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:29.406476" level="INFO">Current page contains element '//a[@title='Accounts']'.</msg>
+<msg time="2024-12-09T18:47:29.406476" level="INFO">${account_tab_visible} = None</msg>
+<var>${account_tab_visible}</var>
+<arg>${accountTab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.387773" elapsed="0.019697"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${account_tab_visible}</arg>
+<arg>Click Element</arg>
+<arg>${accountTab}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.408454" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${accountDetailTab}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.409421" elapsed="0.038518"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:29.462970" level="INFO">Current page contains element '//a[@id='detailTab__item']'.</msg>
+<msg time="2024-12-09T18:47:29.464169" level="INFO">${account_detail_tab_visible} = None</msg>
+<var>${account_detail_tab_visible}</var>
+<arg>${accountDetailTab}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.447939" elapsed="0.016230"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${account_detail_tab_visible}</arg>
+<arg>Click Element</arg>
+<arg>${accountDetailTab}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.464958" elapsed="0.000000"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:29.479490" level="INFO">${createdRecordUrl} = https://fastly--staging.sandbox.lightning.force.com/lightning/r/Account/001O500000XRYVAIA5/view</msg>
+<var>${createdRecordUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.464958" elapsed="0.014532"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:29.481490" level="INFO">Convert Lead successfully https://fastly--staging.sandbox.lightning.force.com/lightning/r/Account/001O500000XRYVAIA5/view</msg>
+<arg>Convert Lead successfully ${createdRecordUrl}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.480495" elapsed="0.000995"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:29.542534" level="INFO">${accname} = Fastly123</msg>
+<var>${accname}</var>
+<arg>${accountName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.482508" elapsed="0.060026"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:29.545537" level="INFO">Converted Account record verified successfully! Account Name: Fastly123</msg>
+<arg>Converted Account record verified successfully! Account Name: ${accname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.544531" elapsed="0.001006"/>
+</kw>
+<arg>'${accname}' == '${lead.company}'</arg>
+<arg>Log</arg>
+<arg>Converted Account record verified successfully! Account Name: ${accname}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.542534" elapsed="0.003003"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:47:29.344989" elapsed="0.201549"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:47:26.342934" elapsed="3.203604"/>
+</kw>
+<kw name="afterLeadConversionVerifyContact" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:32.548960" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:29.548537" elapsed="3.000423"/>
+</kw>
+<kw name="afterLeadConversionVerifyContact" owner="LeadsPage">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:32.555969" level="INFO">@{window_handles} = [ F2E1C49D276FA6D403B90EF9BE5506CD | 6FE67AED96504BCA12F080C839DA6F1A ]</msg>
+<var>@{window_handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.550968" elapsed="0.005001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:32.556968" level="INFO">['F2E1C49D276FA6D403B90EF9BE5506CD', '6FE67AED96504BCA12F080C839DA6F1A']</msg>
+<arg>${window_handles}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.556968" elapsed="0.001001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-09T18:47:32.558974" level="INFO">${parent_window} = F2E1C49D276FA6D403B90EF9BE5506CD</msg>
+<var>${parent_window}</var>
+<arg>${window_handles}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.557969" elapsed="0.001005"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-09T18:47:32.559969" level="INFO">${child_window} = 6FE67AED96504BCA12F080C839DA6F1A</msg>
+<var>${child_window}</var>
+<arg>${window_handles}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.558974" elapsed="0.000995"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${parent_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.559969" elapsed="0.049339"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.610307" elapsed="0.140012"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${child_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.750319" elapsed="0.012007"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:32.807855" level="INFO">${title} = Fastly123 | Account | Salesforce</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.763321" elapsed="0.045533"/>
+</kw>
+<kw name="Log Title" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:32.833854" level="INFO">Fastly123 | Account | Salesforce</msg>
+<doc>Logs and returns the title of the current page.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.808854" elapsed="0.025000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${accountRelatedShowAll}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.834852" elapsed="0.061888"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${accountRelatedShowAll}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:47:32.896740" elapsed="0.328812"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:36.228100" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:33.226547" elapsed="3.001553"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:36.229164" level="INFO">Clicking element '//a[contains(text(),'Show All')]'.</msg>
+<arg>${accountRelatedShowAll}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:36.229164" elapsed="0.154547"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:39.385273" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:36.383711" elapsed="3.001562"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${accountContactsLinkClick}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:39.385835" elapsed="0.041926"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:39.428776" level="INFO">Clicking element '(//slot[contains(text(),'Contacts')])[1]/../..'.</msg>
+<arg>${accountContactsLinkClick}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:39.428776" elapsed="0.162228"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${contactNameLinkClick}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:39.591004" elapsed="1.133104"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:40.725107" level="INFO">Clicking element '//th[@data-label='Contact Name']'.</msg>
+<arg>${contactNameLinkClick}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:40.724108" elapsed="0.141333"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:43.866718" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:40.866469" elapsed="3.000846"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:43.971961" level="INFO">${createdRecordUrl} = https://fastly--staging.sandbox.lightning.force.com/lightning/r/Contact/003O500000ZNTdnIAH/view</msg>
+<var>${createdRecordUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-09T18:47:43.867315" elapsed="0.104646"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:43.972960" level="INFO">Convert Lead successfully https://fastly--staging.sandbox.lightning.force.com/lightning/r/Contact/003O500000ZNTdnIAH/view</msg>
+<arg>Convert Lead successfully ${createdRecordUrl}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:43.972960" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:44.015172" level="INFO">${accname} = Fastly123</msg>
+<var>${accname}</var>
+<arg>${accountName}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:43.972960" elapsed="0.042212"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:44.017694" level="INFO">Converted contact record verified successfully! Account Name: Fastly123</msg>
+<arg>Converted contact record verified successfully! Account Name: ${accname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:44.017694" elapsed="0.000997"/>
+</kw>
+<arg>'${accname}' == '${lead.company}'</arg>
+<arg>Log</arg>
+<arg>Converted contact record verified successfully! Account Name: ${accname}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:47:44.015172" elapsed="0.003519"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btnoppty}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:44.019695" elapsed="0.036030"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:47:32.549983" elapsed="11.505742"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:47:29.547556" elapsed="14.508169"/>
+</kw>
+<kw name="createNewOpportunity" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:47.058371" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:44.057733" elapsed="3.000638"/>
+</kw>
+<kw name="createNewOpportunity" owner="LeadsPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:47.059385" level="INFO">Clicking element '//button[@name='Contact.New_Opportunity_Component']'.</msg>
+<arg>${btnoppty}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:47.059385" elapsed="0.138045"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btnoppty}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:47.198475" elapsed="0.034127"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:50.233738" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:47.233595" elapsed="3.000143"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:50.234855" level="INFO">Selecting options from selection list 'name=selectRecordType' by value Standard.</msg>
+<arg>name=selectRecordType</arg>
+<arg>Standard</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-12-09T18:47:50.233738" elapsed="0.200478"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${newOpptyNext}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:50.434216" elapsed="0.067304"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:50.502346" level="INFO">Clicking element '//button[contains(text(),'Next')]'.</msg>
+<arg>${newOpptyNext}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:50.502346" elapsed="0.207729"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:53.711534" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:50.711076" elapsed="3.000996"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:53.744632" level="INFO">${popUpopptyname} = New Opportunity: Standard</msg>
+<var>${popUpopptyname}</var>
+<arg>${newOpportunityStandard}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:53.712072" elapsed="0.032560"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:47:53.746631" level="INFO">Oppty pop is displayed: New Opportunity: Standard</msg>
+<arg>Oppty pop is displayed: ${popUpopptyname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:47:53.746631" elapsed="0.000000"/>
+</kw>
+<arg>'${popUpopptyname}' == '${Opportunity.NewOpportunityStandard}'</arg>
+<arg>Log</arg>
+<arg>Oppty pop is displayed: ${popUpopptyname}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:47:53.745631" elapsed="0.001999"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:47:53.748630" elapsed="0.052530"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:53.802162" level="INFO">Typing text 'Fastly123' into text field 'xpath=//input[@id=//label[text()='Opportunity Name']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:53.801160" elapsed="0.296058"/>
+</kw>
+<arg>Opportunity Name</arg>
+<arg>${lead.company}</arg>
+<status status="PASS" start="2024-12-09T18:47:53.747630" elapsed="0.350719"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:47:57.099033" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:54.098349" elapsed="3.000684"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${opptyStage}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:47:57.100141" elapsed="0.306094"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${opptyStage}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:47:57.099033" elapsed="0.308203"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${opptyStage}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:47:57.407236" elapsed="0.315746"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:57.744882" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1450")&gt;</msg>
+<var>${ele}</var>
+<arg>//label[contains(text(),'Stage')]/../descendant::button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:57.724026" elapsed="0.020856"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:57.745882" level="INFO">Executing JavaScript:
+arguments[0].click();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1450")&gt;'</msg>
+<arg>arguments[0].click();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-09T18:47:57.744882" elapsed="0.074675"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:47:57.819557" level="INFO">Clicking element '//span[contains(text(),'Qualification') and contains(@title,'Qualification')]'.</msg>
+<arg>${opptyStageQualification}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:47:57.819557" elapsed="0.182500"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:01.002226" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:47:58.002057" elapsed="3.000169"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:01.026251" level="INFO">${CloseDate} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1490")&gt;</msg>
+<var>${CloseDate}</var>
+<arg>//label[contains(text(),'Close Date')]/../descendant::button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:01.002226" elapsed="0.025125"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:04.028075" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:01.027351" elapsed="3.000724"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-12-09T18:48:04.029181" level="INFO">${date_string} = 12/09/2024</msg>
+<var>${date_string}</var>
+<arg>result_format=%m/%d/%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-12-09T18:48:04.028075" elapsed="0.001106"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CloseDate}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:48:04.029181" elapsed="0.296619"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${CloseDate}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:48:04.029181" elapsed="0.296619"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:04.327797" elapsed="0.051488"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:04.380284" level="INFO">Typing text '12/09/2024' into text field 'xpath=//input[@id=//label[text()='Close Date']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:04.379285" elapsed="0.342834"/>
+</kw>
+<arg>Close Date</arg>
+<arg>${date_string}</arg>
+<status status="PASS" start="2024-12-09T18:48:04.326797" elapsed="0.395322"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:07.723655" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:04.722119" elapsed="3.001536"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:07.747153" level="INFO">${ForecastedFastlyTraffic(TB)} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1532")&gt;</msg>
+<var>${ForecastedFastlyTraffic(TB)}</var>
+<arg>//label[contains(text(),'Forecasted Fastly Traffic (TB)')]/../descendant::button</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:07.723655" elapsed="0.024441"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ForecastedFastlyTraffic(TB)}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:48:07.749171" elapsed="0.287076"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${ForecastedFastlyTraffic(TB)}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:48:07.748096" elapsed="0.288151"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.038243" elapsed="0.071088"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:08.110317" level="INFO">Typing text '100' into text field 'xpath=//input[@id=//label[text()='Forecasted Fastly Traffic (TB)']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.109331" elapsed="0.292649"/>
+</kw>
+<arg>Forecasted Fastly Traffic (TB)</arg>
+<arg>${Opportunity.ForecastedFastlyTraffic}</arg>
+<status status="PASS" start="2024-12-09T18:48:08.036247" elapsed="0.365733"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:08.426039" level="INFO">${NorthAmerica} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1369")&gt;</msg>
+<var>${NorthAmerica}</var>
+<arg>//label[contains(text(),'North America')]/../descendant::input</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.401980" elapsed="0.025039"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${NorthAmerica}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.428019" elapsed="0.293407"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${NorthAmerica}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.427019" elapsed="0.295378"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.723430" elapsed="0.054646"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:08.780120" level="INFO">Typing text '50' into text field 'xpath=//input[@id=//label[text()='% North America']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:08.779127" elapsed="0.261663"/>
+</kw>
+<arg>% North America</arg>
+<arg>${Opportunity.northAmerica}</arg>
+<status status="PASS" start="2024-12-09T18:48:08.722397" elapsed="0.319520"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:09.060916" level="INFO">${Europe} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1370")&gt;</msg>
+<var>${Europe}</var>
+<arg>//label[contains(text(),'% Europe')]/../descendant::input</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.041917" elapsed="0.018999"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${Europe}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.061912" elapsed="0.284195"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${Europe}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.060916" elapsed="0.285191"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.348177" elapsed="0.056489"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:09.405712" level="INFO">Typing text '50' into text field 'xpath=//input[@id=//label[text()='% Europe']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.404666" elapsed="0.323011"/>
+</kw>
+<arg>% Europe</arg>
+<arg>${Opportunity.europe}</arg>
+<status status="PASS" start="2024-12-09T18:48:09.347148" elapsed="0.380529"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:09.751711" level="INFO">${TotalRequests} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1395")&gt;</msg>
+<var>${TotalRequests}</var>
+<arg>//label[contains(text(),'Total Requests')]/../descendant::input</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.728646" elapsed="0.024054"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${TotalRequests}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.753757" elapsed="0.299284"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${TotalRequests}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:48:09.752700" elapsed="0.300341"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.055105" elapsed="0.053574"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:10.109679" level="INFO">Typing text '100,000.00' into text field 'xpath=//input[@id=//label[text()='Total Requests']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.109679" elapsed="0.312772"/>
+</kw>
+<arg>Total Requests</arg>
+<arg>${Opportunity.totalRequests}</arg>
+<status status="PASS" start="2024-12-09T18:48:10.053041" elapsed="0.370461"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:10.441444" level="INFO">${EstimatedAnnualBookingAmount} = &lt;selenium.webdriver.remote.webelement.WebElement (session="15b274df5e15d0234083187888a36e92", element="f.6FE67AED96504BCA12F080C839DA6F1A.d.36A2E72476E73E973AECBA015026AB99.e.1402")&gt;</msg>
+<var>${EstimatedAnnualBookingAmount}</var>
+<arg>//label[contains(text(),'Estimated Annual Booking Amount')]/../descendant::input</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.423502" elapsed="0.017942"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${EstimatedAnnualBookingAmount}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.442456" elapsed="0.294986"/>
+</kw>
+<arg>Scroll Element Into View</arg>
+<arg>${EstimatedAnnualBookingAmount}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.442456" elapsed="0.294986"/>
+</kw>
+<kw name="SendText" owner="SalesforceCommonPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>60 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.739577" elapsed="0.057292"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:10.797945" level="INFO">Typing text '100,000.00' into text field 'xpath=//input[@id=//label[text()='Estimated Annual Booking Amount']/@for]'.</msg>
+<arg>xpath=//input[@id=//label[text()='${label_name}']/@for]</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:10.797945" elapsed="0.290002"/>
+</kw>
+<arg>Estimated Annual Booking Amount</arg>
+<arg>${Opportunity.totalRequests}</arg>
+<status status="PASS" start="2024-12-09T18:48:10.738578" elapsed="0.349369"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:11.090092" level="INFO">Clicking element '//button[@name='SaveEdit' and contains(text(),'Save')]'.</msg>
+<arg>${optySave}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:11.088944" elapsed="0.187306"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:14.277287" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:11.277209" elapsed="3.000078"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:14.289950" level="INFO">${createdRecordUrl} = https://fastly--staging.sandbox.lightning.force.com/lightning/o/Opportunity/new?count=1&amp;recordTypeId=012E000000060tuIAA&amp;nooverride=1&amp;backgroundContext=%2Flightning%2Fr%2FContact%2F003O500000ZNTdnIAH%2...</msg>
+<var>${createdRecordUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-09T18:48:14.277922" elapsed="0.012028"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:48:14.290945" level="INFO">opportunity created successfully https://fastly--staging.sandbox.lightning.force.com/lightning/o/Opportunity/new?count=1&amp;recordTypeId=012E000000060tuIAA&amp;nooverride=1&amp;backgroundContext=%2Flightning%2Fr%2FContact%2F003O500000ZNTdnIAH%2Fview</msg>
+<arg>opportunity created successfully ${createdRecordUrl}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:48:14.289950" elapsed="0.000995"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:34.291520" level="INFO">Slept 20 seconds.</msg>
+<arg>20 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:14.290945" elapsed="20.000575"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:34.334146" level="INFO">${optyquotebuttonname} = New Quote</msg>
+<var>${optyquotebuttonname}</var>
+<arg>${optyNewQuoteButton}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:34.291520" elapsed="0.042626"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-09T18:48:34.337140" level="INFO">Opportunity created sucessfully! oppty record id: https://fastly--staging.sandbox.lightning.force.com/lightning/o/Opportunity/new?count=1&amp;recordTypeId=012E000000060tuIAA&amp;nooverride=1&amp;backgroundContext=%2Flightning%2Fr%2FContact%2F003O500000ZNTdnIAH%2Fview</msg>
+<arg>Opportunity created sucessfully! oppty record id: ${createdRecordUrl}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-09T18:48:34.336141" elapsed="0.000999"/>
+</kw>
+<arg>'${optyquotebuttonname}' == '${Opportunity.newQuoteButton}'</arg>
+<arg>Log</arg>
+<arg>Opportunity created sucessfully! oppty record id: ${createdRecordUrl}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-12-09T18:48:34.335141" elapsed="0.001999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:37.338498" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:34.337140" elapsed="3.001920"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:47:47.059385" elapsed="50.279675"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:47:44.056727" elapsed="53.282333"/>
+</kw>
+<kw name="createNewQuote" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:48:40.342788" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:37.341285" elapsed="3.001503"/>
+</kw>
+<kw name="createNewQuote" owner="LeadsPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${optyNewQuoteButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:48:40.343342" elapsed="0.040153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:48:40.384502" level="INFO">Clicking element '//button[@name='Opportunity.New_Quote_LWC']'.</msg>
+<arg>${optyNewQuoteButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:48:40.384502" elapsed="0.251464"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:49:20.638019" level="INFO">Slept 40 seconds.</msg>
+<arg>40 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:48:40.636963" elapsed="40.001641"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:48:40.343342" elapsed="40.295262"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:48:37.341285" elapsed="43.297319"/>
+</kw>
+<kw name="addProducts" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:49:23.641313" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:49:20.640764" elapsed="3.000549"/>
+</kw>
+<kw name="addProducts" owner="LeadsPage">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:49:23.642330" level="INFO">Selecting frame '(//iframe[@title='accessibility title'])[15]'.</msg>
+<arg>${iframequote}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-09T18:49:23.642330" elapsed="0.055046"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:49:43.698981" level="INFO">Slept 20 seconds.</msg>
+<arg>20 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:49:23.697376" elapsed="20.002630"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:49:43.702007" level="INFO">Executing JavaScript:
+document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-line-editor").shadowRoot.querySelector("#groupLayout").shadowRoot.querySelector("#Group_2").shadowRoot.querySelector("#groupActions &gt; sb-custom-action").shadowRoot.querySelector("#mainButton").click();
+Without any arguments.</msg>
+<arg>document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-line-editor").shadowRoot.querySelector("#groupLayout").shadowRoot.querySelector("#Group_2").shadowRoot.querySelector("#groupActions &gt; sb-custom-action").shadowRoot.querySelector("#mainButton").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-09T18:49:43.700006" elapsed="0.067004"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-09T18:49:43.767010" elapsed="0.005099"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:50:23.773379" level="INFO">Slept 40 seconds.</msg>
+<arg>40 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:49:43.773118" elapsed="40.000261"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:49:23.641313" elapsed="60.132066"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:49:20.639776" elapsed="63.133603"/>
+</kw>
+<kw name="selectProduct" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:50:26.776239" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:50:23.775709" elapsed="3.000530"/>
+</kw>
+<kw name="selectProduct" owner="LeadsPage">
+<kw name="wait_for_page_load" owner="CommonPage">
+<kw name="Wait For Condition" owner="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" start="2024-12-09T18:50:26.778261" elapsed="0.013006"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:50:26.778261" elapsed="0.014000"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:50:26.793257" level="INFO">Selecting frame '(//iframe[@title='accessibility title'])[15]'.</msg>
+<arg>${iframequote}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-09T18:50:26.792261" elapsed="0.054280"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:50:36.847990" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:50:26.847539" elapsed="10.000451"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:50:36.849107" level="INFO">Typing text 'domainr' into text field 'dom:document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#headersearch").shadowRoot.querySelector("#typeahead").shadowRoot.querySelector("#itemLabel")'.</msg>
+<arg>dom:document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#headersearch").shadowRoot.querySelector("#typeahead").shadowRoot.querySelector("#itemLabel")</arg>
+<arg>domainr</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:50:36.847990" elapsed="0.175020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:50:47.024297" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:50:37.023010" elapsed="10.001287"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>step1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-09T18:50:47.024297" elapsed="0.002312"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:50:47.027609" level="INFO">Clicking element 'dom:document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#headersearch").shadowRoot.querySelector("#buttons &gt; paper-button")'.</msg>
+<arg>dom:document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#headersearch").shadowRoot.querySelector("#buttons &gt; paper-button")</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:50:47.026609" elapsed="0.292473"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:17.320494" level="INFO">Slept 30 seconds.</msg>
+<arg>30 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:50:47.319082" elapsed="30.001412"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>step2</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-09T18:51:17.321002" elapsed="0.000000"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-09T18:51:17.322022" elapsed="0.005537"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:50:26.777263" elapsed="50.550296"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:50:23.774708" elapsed="53.552851"/>
+</kw>
+<kw name="ConfigureProducts" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:20.329586" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:17.329016" elapsed="3.000570"/>
+</kw>
+<kw name="ConfigureProducts" owner="LeadsPage">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:51:20.330641" level="INFO">Selecting frame '(//iframe[@title='accessibility title'])[15]'.</msg>
+<arg>${iframequote}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-09T18:51:20.330641" elapsed="0.048504"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:30.380461" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:20.380169" elapsed="10.000292"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:51:30.382485" level="INFO">Executing JavaScript:
+document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#lookupLayout").shadowRoot.querySelector("#tableRow").shadowRoot.querySelector("#selection").shadowRoot.querySelector("#g &gt; div &gt; sb-table-cell-select").shadowRoot.querySelector("#checkbox").click();
+Without any arguments.</msg>
+<arg>document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#lookupLayout").shadowRoot.querySelector("#tableRow").shadowRoot.querySelector("#selection").shadowRoot.querySelector("#g &gt; div &gt; sb-table-cell-select").shadowRoot.querySelector("#checkbox").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-09T18:51:30.381485" elapsed="0.014056"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:35.396761" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:30.395541" elapsed="5.001220"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:51:35.398818" level="INFO">Executing JavaScript:
+document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#plSelect").click();
+Without any arguments.</msg>
+<arg>document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-product-lookup").shadowRoot.querySelector("#plSelect").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-09T18:51:35.397826" elapsed="0.025963"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:45.424351" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:35.423789" elapsed="10.000562"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:51:20.329586" elapsed="25.095371"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:51:17.329016" elapsed="28.095941"/>
+</kw>
+<kw name="QuoteSave" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:48.427456" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:45.427004" elapsed="3.000452"/>
+</kw>
+<kw name="QuoteSave" owner="LeadsPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:51:48.429004" level="INFO">Clicking element 'dom:document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-line-editor").shadowRoot.querySelector("#actions &gt; sb-custom-action:nth-child(11)").shadowRoot.querySelector("#mainButton")'.</msg>
+<arg>dom:document.querySelector("#sbPageContainer").shadowRoot.querySelector("#content &gt; sb-line-editor").shadowRoot.querySelector("#actions &gt; sb-custom-action:nth-child(11)").shadowRoot.querySelector("#mainButton")</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:51:48.427988" elapsed="0.274699"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:51:58.704143" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:48.703687" elapsed="10.000456"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-09T18:51:58.705211" elapsed="0.007053"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:03.713619" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:51:58.713271" elapsed="5.000860"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${quoteNumber}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:52:03.714131" elapsed="0.524487"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:07.239079" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:04.238618" elapsed="3.000461"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:51:48.427988" elapsed="18.811091"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:51:45.426006" elapsed="21.814207"/>
+</kw>
+<kw name="CloseWonOpportunity" owner="LeadsKeywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:10.242679" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:07.242199" elapsed="3.000480"/>
+</kw>
+<kw name="CloseWonOpportunity" owner="LeadsPage">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${opptyLinkClick}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-12-09T18:52:10.243694" elapsed="0.298048"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:20.542411" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:10.541742" elapsed="10.000669"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:52:20.543556" level="INFO">Double clicking element '//*[text()='Opportunity']/ancestor::*[@field-label='Opportunity']//a'.</msg>
+<arg>${opptyLinkClick}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:52:20.543556" elapsed="0.808741"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:31.353847" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:21.353298" elapsed="10.000549"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:52:31.354959" level="INFO">Double clicking element '//span[@class='title slds-path__title'][normalize-space()='Closed']'.</msg>
+<arg>${Closed}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:52:31.353847" elapsed="0.384374"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:41.739822" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:31.739149" elapsed="10.000673"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:52:41.740942" level="INFO">Double clicking element '//button[@class='slds-button slds-button--brand slds-path__mark-complete stepAction active uiButton']'.</msg>
+<arg>${Markstagecomplete}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:52:41.739822" elapsed="0.373893"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:52:52.114022" level="INFO">Slept 10 seconds.</msg>
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:42.113715" elapsed="10.000888"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:52:52.115717" level="INFO">Double clicking element '//*[contains(@class,'modal-container')]//button[@type='submit']'.</msg>
+<arg>${Done}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-09T18:52:52.114603" elapsed="0.374621"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-09T18:52:52.526224" level="INFO">Executing JavaScript:
+//*[contains(@class,'modal-container')]//button[@type='submit']
+Without any arguments.</msg>
+<arg>${Done}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-09T18:52:52.490221" elapsed="0.054765"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:53:22.547281" level="INFO">Slept 30 seconds.</msg>
+<arg>30 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:52:52.545991" elapsed="30.001290"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ClosedWonContract}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-09T18:53:22.547798" elapsed="0.131884"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T18:53:42.681394" level="INFO">Slept 20 seconds.</msg>
+<arg>20 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T18:53:22.679682" elapsed="20.001712"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:52:10.242679" elapsed="92.438715"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:52:07.241214" elapsed="95.440180"/>
+</kw>
+<status status="PASS" start="2024-12-09T18:45:39.632200" elapsed="483.050559"/>
+</test>
+<meta name="Cycle">1</meta>
+<meta name="Release">Fastly - Smoke Test Suite</meta>
+<meta name="Version">2.0</meta>
+<status status="PASS" start="2024-12-09T18:45:08.048474" elapsed="514.637284"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CreateLeadTests copy">CreateLeadTests copy</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-09T18:45:08.388348" level="WARN">Error in file 'c:\Users\Relanto\Desktop\Salesforce_Sample_Demo\Resources\Pages\SalesforceCommonPage.robot' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

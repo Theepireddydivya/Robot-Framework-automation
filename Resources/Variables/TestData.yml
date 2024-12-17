@@ -1,0 +1,15 @@
+#Create Lead TestData
+lead:
+  firstname: "Automation"
+  last_name: "User -"
+  company: "Fastly123"
+  Email: "Automation@fastly.com"
+
+Opportunity:
+  NewOpportunityStandard: "New Opportunity: Standard"
+  ForecastedFastlyTraffic: "100"
+  northAmerica: "50"
+  europe: "50"
+  totalRequests: "100,000.00"
+  newQuoteButton: "New Quote"
+  product:  "NETWORK_SERVICES_PACKAGES"

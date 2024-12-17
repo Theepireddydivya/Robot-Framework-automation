@@ -1,0 +1,60 @@
+#Leads Keywords Variables
+login_sys_admin:
+    username:    "dbell@fastly.com.staging "
+    password:    "Testing2!!"
+
+#Dashboard Page Variables
+dashboard_new_account_button: "//a[@title='New']"
+menu_dots_button: "//div[@role='navigation'][@aria-label='App']/descendant::button"
+app_search_text_box: "//input[@placeholder='Search apps and items...']"
+app_search_result_link: "//a[@data-label='Fastly Sales']/descendant::b[text()='Fastly Sales']"
+app_launcher_menu: "//div[@one-applaunchermenu_applaunchermenu][@role='combobox']"
+
+#Leads Page Variables
+dashboard_new_button: "//a[@title='New']"
+save_button_locator: "//button[text()='Save']"
+next_button_locator: "//span[contains(text(),'Next')]/.."
+convert_button_locator: "//button[contains(text(),'Convert')]"
+convert_button_verify: "(//input[@title='Convert'])[1]"
+txtConvertLeadMessage: "//*[@id='bodyCell']/descendant::*[text()='Convert Lead' and @class='pageType'] | //h3[text()='Convert Lead']"
+btnDetailConvert: "(//input[@title='Convert'])[1]"
+inputConvertNewLead: "(//input[@title='Convert to New'])[1]"
+btnConvertLead: "//button[contains(text(),'Convert')]"
+do_not_create_opty_xpath: "//input[@id='nooppti']"
+#Account Page
+accountTab:  "//a[@title='Accounts']"
+accountDetailTab:  "//a[@id='detailTab__item']"
+accountName:  "//div[@data-target-selection-name='sfdc:RecordField.Account.Name']//div[@class='slds-form-element__control']//lightning-formatted-text[@data-output-element-id='output-field']"
+accountRelatedShowAll:  "//a[contains(text(),'Show All')]"
+accountContactsLinkClick:  "(//slot[contains(text(),'Contacts')])[1]/../.."
+#Contact Page
+contactNameLinkClick:  "//th[@data-label='Contact Name']"
+#Opportunity
+btnoppty:  "//button[@name='Contact.New_Opportunity_Component']"
+newOpptyNext:  "//button[contains(text(),'Next')]"
+oppLinkClick:  "(//slot[contains(text(),'Opportunities')])[1]/../.."
+#opptyName: "//input[@name='Name']"
+opptyName:  "//input[@id='input-3069' and @name='Name']"
+newOpportunityStandard:  "//h2[contains(text(),'New Opportunity: Standard')]"
+opptyStage:  "//label[contains(text(),'Stage')]/../descendant::button"
+opptyStageQualification:  "//span[contains(text(),'Qualification') and contains(@title,'Qualification')]"
+optySave: "//button[@name='SaveEdit' and contains(text(),'Save')]"
+optyNewQuoteButton: "//button[@name='Opportunity.New_Quote_LWC']"
+#opptyLinkclickonquotepage:  "(//a[@id='relatedListsTab__item'])[3]"
+opptyLinkClick:  "//*[text()='Opportunity']/ancestor::*[@field-label='Opportunity']//a"
+Closed:  "//span[@class='title slds-path__title'][normalize-space()='Closed']"
+Markstagecomplete:  "//button[@class='slds-button slds-button--brand slds-path__mark-complete stepAction active uiButton']"
+Done:  "//*[contains(@class,'modal-container')]//button[@type='submit']"
+ClosedWonContract:  "//span[@class='title slds-path__title'][normalize-space()='Closed/Won Contract']"
+#NewQuote
+newQuoteTemplateBtn:  "//button[@name='quoteTemplates']"
+newQuoteTemplateNone:  "//span[contains(text(),'None') and contains(@title,'None')]"
+newQuoteContinue:  "//button[@title='Continue']"
+iframequote:  "(//iframe[@title='accessibility title'])[15]"
+isvisible1:  "//html[@class='ext-strict']/descendant::title[contains(text(),'Salesforce - Performance Edition')]"
+iframequote1:  "(//iframe)[14]"
+quoteNumber:  "//*[contains(@id,'sectionContent')]//span[text()='Quote Number']"
+#testpage
+iframequotetest:  "(//iframe[@title='accessibility title'])[2]"
+iframequotetest1:  "(//iframe[@title='accessibility title'])[3]"
+
