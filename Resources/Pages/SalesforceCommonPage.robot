@@ -8,7 +8,7 @@ ClickTopNavigationTab
     [Arguments]    ${tab_name}
     wait until element is visible    xpath=//a[@title='${tab_name}']    60 seconds
     double click element    xpath=//a[@title='${tab_name}']
-    Wait Until Element Is Visible    xpath=//lst-breadcrumbs//span[text()='${tab_name}']    60 seconds
+    Wait Until Element Is Visible    xpath=//lst-breadcrumbs//*[text()='${tab_name}']    60 seconds
     Sleep    1s
 
 SendText

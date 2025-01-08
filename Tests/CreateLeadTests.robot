@@ -15,9 +15,10 @@ Suite Setup    Initial Setup
 
 Create and validate a Lead
     LeadsKeywords.Select Sales
-    LeadsKeywords.Create a Lead
+    LeadsKeywords.Create a Lead5
 
-Convert Lead
+#  Flow #1 Closed/Won Contract opportunity
+Closed/Won Contract opportunity
     LeadsKeywords.Select Sales
     LeadsKeywords.Create a Lead
     LeadsKeywords.Convert Lead

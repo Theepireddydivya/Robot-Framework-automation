@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Library    DateTime
 Library    String
+Library    XML
 Resource    ${CURDIR}${/}..${/}/Pages/SalesforceCommonPage.robot
 Resource    CommonPage.robot
 Variables    ${CURDIR}${/}..${/}/Variables/GlobalVariables.yml
@@ -226,11 +227,17 @@ CloseWonOpportunity
   Sleep   10 seconds
   Double click Element  ${Markstagecomplete}
   Sleep   10 seconds
-  Double click Element  ${Done}
-  Execute Javascript  ${Done}
-  Sleep   30 seconds
-  Wait Until Element Is Visible    ${ClosedWonContract}
-  Sleep   20 seconds
+  #Double click Element  ${Done}
+  #Execute Javascript  ${Done}
+  Wait Until Element Is Visible    ${Stagedrp}    10
+  Click Element    ${Stagedrp}
+  #Sleep   10 seconds
+  Wait Until Element Is Visible    ${ClosedWonContract}    10
+  Click Element    ${ClosedWonContract}
+  Wait Until Element Is Visible    ${Closedwoncontractsave}    10
+  Click Element    ${Closedwoncontractsave}
+  Wait Until Element Is Visible    ${ChangeClosedStage}    40
+  
   
 Convert Lead By Uncheck Do not create a new opportunity upon conversion
   wait until page contains  Convert
